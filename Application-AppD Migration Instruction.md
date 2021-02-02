@@ -2,7 +2,8 @@
 
 ## 确保AppD正常启动
 
--   确保把Enterprise Console启动起来，参考如下命令：(AppDynamics版本是：AppDynamics Controller build 4.5.13.3101）
+-   确保把Enterprise Console启动起来，参考如下命令：（AppDynamics
+    Controller版本为：4.5.13.3101）
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/appdynamics/platform/platform-admin/bin/platform-admin.sh start-platform-admin
@@ -63,32 +64,24 @@ Machine Agent：vi /home/machineagent/conf/controller-info.xml
         -   web01虚机上：
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.socket.collection.bci.enable=true -Dappdynamics.controller.hostName=172.16.1.97 -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=FrontEnd -Dappdynamics.agent.nodeName=FrontEndNode1 -Dhttp.ports=18010,18011 -jar /home/trainingapp/testappserver.jar /home/trainingapp/1stTierconfig.xml &
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.socket.collection.bci.enable=true -Dappdynamics.controller.hostName=<新IP地址> -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=FrontEnd -Dappdynamics.agent.nodeName=FrontEndNode1 -Dhttp.ports=18010,18011 -jar /home/trainingapp/testappserver.jar /home/trainingapp/1stTierconfig.xml &
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=172.16.1.97 -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=OrderProcessing -Dappdynamics.agent.nodeName=OrderProcessingNode1 -Dhttp.port=18030 -jar /home/trainingapp/testappserver.jar /home/trainingapp/3dTierconfig.xml &
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=<新IP地址> -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=OrderProcessing -Dappdynamics.agent.nodeName=OrderProcessingNode1 -Dhttp.port=18030 -jar /home/trainingapp/testappserver.jar /home/trainingapp/3dTierconfig.xml &
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=172.16.1.97 -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=Inventory -Dappdynamics.agent.nodeName=InventoryNode1 -Dhttp.port=18020 -jar /home/trainingapp/testappserver.jar /home/trainingapp/2ndTierconfig.xml &
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=<新IP地址> -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=Inventory -Dappdynamics.agent.nodeName=InventoryNode1 -Dhttp.port=18020 -jar /home/trainingapp/testappserver.jar /home/trainingapp/2ndTierconfig.xml &
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=172.16.1.97 -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=FrontEnd -Dappdynamics.agent.nodeName=FrontEndNode1 -Dhttp.ports=18010,18011 -jar /home/trainingapp/testappserver.jar /home/trainingapp/1stTierconfig.xml &
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=<新IP地址> -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=Vinyl-Fanatics -Dappdynamics.agent.tierName=FrontEnd -Dappdynamics.agent.nodeName=FrontEndNode1 -Dhttp.ports=18010,18011 -jar /home/trainingapp/testappserver.jar /home/trainingapp/1stTierconfig.xml &
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=172.16.1.97 -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=courseback -Dappdynamics.agent.tierName=coursefront -Dappdynamics.agent.nodeName=coursefront1 -jar /home/frontdemo-0.0.1-SNAPSHOT.jar &
+nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=<新IP地址> -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=courseback -Dappdynamics.agent.tierName=coursefront -Dappdynamics.agent.nodeName=coursefront1 -jar /home/frontdemo-0.0.1-SNAPSHOT.jar &
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -   app02虚机上：
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=172.16.1.97 -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=courseback -Dappdynamics.agent.tierName=coursefund -Dappdynamics.agent.nodeName=courseback1 -jar /home/demo-0.0.1-SNAPSHOT.jar &
+nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hostName=<新IP地址> -Dappdynamics.controller.port=8090 -Dappdynamics.agent.applicationName=courseback -Dappdynamics.agent.tierName=coursefund -Dappdynamics.agent.nodeName=courseback1 -jar /home/demo-0.0.1-SNAPSHOT.jar &
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--   检查以上新进程是否在：ps aux \| grep 172.16.1.97
+-   检查以上新进程是否在：ps aux \| grep \<新IP地址\>
 
     -   db01主机上：mysql数据库可能需要重启一下（一般开机会自动加载）
 
@@ -101,13 +94,13 @@ nohup java -javaagent:/home/javaagent/javaagent.jar -Dappdynamics.controller.hos
     -   在web01和app02输入如下启动Machine agent的命令（Network Visibility
         Agent会一起启动）
 
-        nohup /home/machineagent/jre/bin/java
-        \-Dlog4j.configuration=file:/home/machineagent/conf/logging/log4j.xml
-        \-jar /home/machineagent/machineagent.jar &
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nohup /home/machineagent/jre/bin/java -Dlog4j.configuration=file:/home/machineagent/conf/logging/log4j.xml -jar /home/machineagent/machineagent.jar &
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    -   检查新进程是否在：
+-   检查新进程是否在：
 
-        -   查看machine agent：ps aux \| grep machineagent.jar
+    -   查看machine agent：ps aux \| grep machineagent.jar
 
         -   查看appd net monitor和net agent：ps aux \| grep appd-net
 
