@@ -2,7 +2,7 @@
 
 ## 确保AppD正常启动
 
--   确保把Enterprise Console启动起来，参考如下命令：
+-   确保把Enterprise Console启动起来，参考如下命令：(AppDynamics版本是：AppDynamics Controller build 4.5.13.3101）
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/appdynamics/platform/platform-admin/bin/platform-admin.sh start-platform-admin
